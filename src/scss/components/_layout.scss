@@ -219,6 +219,15 @@ ul.no-bullets {
 	padding: 2em 0;
 }
 .entry-content {
+	.size-full,
+	.cp_embed_wrapper {
+	    display: block;
+	    left: 50%;
+	    position: relative;
+	    transform: translateX(-50%);
+	    width: 100vw;
+	    max-width: 1400px;
+	}
 	.icon {
 		margin: 2em auto;
 	}
