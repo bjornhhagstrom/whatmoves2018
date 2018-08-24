@@ -27,7 +27,7 @@
 			<div class="entry-meta">
 				<?php
 				whatmoves_posted_on();
-				whatmoves_posted_by();
+				// whatmoves_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -38,7 +38,7 @@
 
 	<div class="entry-content">
 		<div class="small-container">
-		<?php
+		<?php if ( is_singular() ) :
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
@@ -56,13 +56,17 @@
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'whatmoves' ),
 			'after'  => '</div>',
 		) );
+		else :
+			the_excerpt();
+		endif;
 		?>
+		<hr />
 		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<!-- <footer class="entry-footer">
 		<div class="small-container">
-		<?php whatmoves_entry_footer(); ?>
+		<?php // whatmoves_entry_footer(); ?>
 		</div>
-	</footer><!-- .entry-footer -->
+	</footer> --><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

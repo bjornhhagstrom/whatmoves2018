@@ -226,10 +226,28 @@ ul.no-bullets {
 	    position: relative;
 	    transform: translateX(-50%);
 	    width: 100vw;
-	    max-width: 1400px;
+	    max-width: 1200px;
+	    padding: 0 2em;
 	}
 	.icon {
 		margin: 2em auto;
+	}
+}
+.blog,
+.archive {
+	.entry-title {
+		margin-bottom: 0;
+	}
+	article {
+		.entry-content {
+			margin-top: 0;
+		}
+	}
+}
+.single {
+	.entry-meta {
+		text-align: center;
+		color: $accent-color;
 	}
 }
 
