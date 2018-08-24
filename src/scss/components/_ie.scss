@@ -1,0 +1,15 @@
+/* IE
+  =============== */
+.no-cssgrid {
+	#title {
+		color: $heading-font-color;
+		&:before, 
+		&:after {
+		}
+	}
+	.article-header {
+		.small-container {
+			overflow: visible;
+		}
+	}
+}
